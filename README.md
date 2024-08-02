@@ -35,7 +35,7 @@ The dataset encompasses a wide array of variables:
 - **Educational and Lifestyle Factors**: Encompasses `EducationLevel`, `BMI`, `Smoking`, `AlcoholConsumption`, `PhysicalActivity`, `DietQuality`, and `SleepQuality`.
 - **Medical and Family History**: Covers `FamilyHistoryAlzheimers`, `CardiovascularDisease`, `Diabetes`, `Depression`, `HeadInjury`, `Hypertension`.
 - **Clinical Measurements**: Consists of `SystolicBP`, `DiastolicBP`, `CholesterolTotal`, `CholesterolLDL`, `CholesterolHDL`, `CholesterolTriglycerides`.
-- **Cognitive, Behavioral, and Functional Assessments**: Includes `MMSE`, `FunctionalAssessment`, `MemoryComplaints`, `BehavioralProblems`, `ADL`, `Confusion`, `Disorientation`, `PersonalityChanges`, `DifficultyCompletingTasks`, `Forgetfulness`.
+- **Cognitive, Behavioral, and Functional Assessments**: Includes `MMSE(Mini-Mental State Examination score)`, `FunctionalAssessment`, `MemoryComplaints`, `BehavioralProblems`, `ADL(Activities of Daily Living score)`, `Confusion`, `Disorientation`, `PersonalityChanges`, `DifficultyCompletingTasks`, `Forgetfulness`.
 
 
 ### Analytical Insights and Visualization
@@ -98,20 +98,21 @@ Given the classification nature of the Alzheimer's disease prediction problem, s
 
 The models were evaluated based on their accuracy and ROC AUC scores both before and after applying SMOTE, and following hyperparameter tuning. Here are the summarized results:
 
-| Model                    | Stage                      | Accuracy | ROC AUC |
-|--------------------------|----------------------------|----------|---------|
-| Logistic Regression      | Before SMOTE               | 81.71%   | 87.69%  |
-| SVM                      | Before SMOTE               | 80.47%   | 87.42%  |
-| Random Forest            | Before SMOTE               | 89.30%   | 94.18%  |
-| Logistic Regression      | After SMOTE                | 83.45%   | 91.39%  |
-| SVM                      | After SMOTE                | 86.33%   | 93.15%  |
-| Random Forest            | After SMOTE                | 90.05%   | 94.58%  |
-| Logistic Regression      | After Tuning (Original)    | 81.71%   | 87.73%  |
-| SVM                      | After Tuning (Original)    | 80.47%   | 87.42%  |
-| Random Forest            | After Tuning (Original)    | 90.39%   | 94.29%  |
-| Logistic Regression      | After Tuning (SMOTE)       | 83.45%   | 91.39%  |
-| SVM                      | After Tuning (SMOTE)       | 86.33%   | 93.15%  |
-| Random Forest            | After Tuning (SMOTE)       | 90.41%   | 94.66%  |
+| Model                | Stage                     | Accuracy | ROC AUC  |
+|----------------------|---------------------------|----------|----------|
+| Logistic Regression  | Before SMOTE              | 0.817054 | 0.876875 |
+| SVM                  | Before SMOTE              | 0.803101 | 0.874039 |
+| Random Forest        | Before SMOTE              | 0.894574 | 0.941821 |
+| Logistic Regression  | After SMOTE               | 0.798450 | 0.876201 |
+| SVM                  | After SMOTE               | 0.803101 | 0.873503 |
+| Random Forest        | After SMOTE               | 0.913178 | 0.938979 |
+| Logistic Regression  | After Tuning (Original)   | 0.817054 | 0.877346 |
+| SVM                  | After Tuning (Original)   | 0.803101 | 0.874055 |
+| Random Forest        | After Tuning (Original)   | 0.905426 | 0.942858 |
+| Logistic Regression  | After Tuning (SMOTE)      | 0.798450 | 0.876528 |
+| SVM                  | After Tuning (SMOTE)      | 0.787597 | 0.852326 |
+| Random Forest        | After Tuning (SMOTE)      | 0.922481 | 0.941023 |
+
 
 # Visualization
 
@@ -119,7 +120,7 @@ ROC-AUC curves were plotted to visually represent the performance of each model 
 <img src="/plot7.png" alt="ROC AUC">
 # Conclusion
 
-The Random Forest model consistently outperformed the other models in terms of both accuracy and ROC AUC scores, with the highest scores observed after applying SMOTE and tuning. This indicates that Random Forest is particularly well-suited to handling the complexities of predicting Alzheimer's disease from the dataset used. Furthermore, the benefits of SMOTE in managing class imbalance and enhancing model performance were clearly demonstrated, making it a valuable technique for similar classification problems in the medical field. This comprehensive evaluation ensures that the selected model is robust, achieving high accuracy(90%) and excellent discriminative ability, making it a reliable tool in assisting the diagnosis of Alzheimer's disease.
+The Random Forest model consistently outperformed the other models in terms of both accuracy and ROC AUC scores, with the highest scores observed after applying SMOTE and tuning. This indicates that Random Forest is particularly well-suited to handling the complexities of predicting Alzheimer's disease from the dataset used. Furthermore, the benefits of SMOTE in managing class imbalance and enhancing model performance were clearly demonstrated, making it a valuable technique for similar classification problems in the medical field. This comprehensive evaluation ensures that the selected model is robust, achieving high accuracy and excellent discriminative ability, making it a reliable tool in assisting the diagnosis of Alzheimer's disease.
 
 
 
