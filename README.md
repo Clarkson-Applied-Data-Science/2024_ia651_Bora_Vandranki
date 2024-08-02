@@ -79,7 +79,7 @@ The dataset encompasses a wide array of variables:
 The EDA provided deep insights into the dataset, highlighting key variables that could influence the diagnosis of Alzheimer's. The findings from this analysis will guide the feature selection and model development phases, aiming to create a predictive model that is both accurate and reliable in diagnosing Alzheimer’s disease.
 
 
-# Model Selection adn Evaluation
+# Model Selection and Evaluation
 Given the classification nature of the Alzheimer's disease prediction problem, several machine learning models were evaluated to determine the best fit. The chosen models were Logistic Regression, Support Vector Machine (SVM), and Random Forest due to their effectiveness in handling classification tasks.
 
 
@@ -87,8 +87,8 @@ Given the classification nature of the Alzheimer's disease prediction problem, s
 ## Data Preparation
 - **Feature Selection**: Features like `Diagnosis` (target variable), `DoctorInCharge`, and `PatientID` were excluded from the feature set. The remaining features were utilized, ensuring they were largely free from redundancy.
 - **Scaling**: All numeric features were scaled to have a uniform scale, which is crucial for models like SVM that are sensitive to the magnitude of data.
-- **Data Splitting**: The dataset was split into training and testing sets post-scaling to ensure the models are evaluated on unseen data.
-- **Handling Imbalance**: The SMOTE technique was applied to balance the classes in the training dataset, addressing the imbalance observed in the target variable `Diagnosis`.
+- **Data Splitting**: The dataset was split into training and testing sets.
+- **Handling Imbalance**: The SMOTE technique was applied to balance the classes in the training dataset, it was applied on training data and then tested on your test data addressing the imbalance observed in the target variable `Diagnosis` 
 
 ## Model Training and Hyperparameter Tuning
 - Initial training was conducted on the original dataset as well as the SMOTE-augmented dataset to compare the effects of balancing the data.
