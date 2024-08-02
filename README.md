@@ -30,12 +30,72 @@ The purpose of this EDA was to analyze the Alzheimer’s disease dataset thoroug
 
 ### Data Description
 
-The dataset encompasses a wide array of variables:
-- **Demographic Information**: Includes `PatientID`, `Age`, `Gender`, and `Ethnicity`.
-- **Educational and Lifestyle Factors**: Encompasses `EducationLevel`, `BMI`, `Smoking`, `AlcoholConsumption`, `PhysicalActivity`, `DietQuality`, and `SleepQuality`.
-- **Medical and Family History**: Covers `FamilyHistoryAlzheimers`, `CardiovascularDisease`, `Diabetes`, `Depression`, `HeadInjury`, `Hypertension`.
-- **Clinical Measurements**: Consists of `SystolicBP`, `DiastolicBP`, `CholesterolTotal`, `CholesterolLDL`, `CholesterolHDL`, `CholesterolTriglycerides`.
-- **Cognitive, Behavioral, and Functional Assessments**: Includes `MMSE(Mini-Mental State Examination score)`, `FunctionalAssessment`, `MemoryComplaints`, `BehavioralProblems`, `ADL(Activities of Daily Living score)`, `Confusion`, `Disorientation`, `PersonalityChanges`, `DifficultyCompletingTasks`, `Forgetfulness`.
+This dataset encompasses a wide range of variables collected from patients undergoing evaluation for Alzheimer's Disease. Each patient is uniquely identified, allowing for a comprehensive analysis of demographic variables, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, and diagnosis information.
+
+#### Patient Identification
+- `PatientID`: A unique identifier assigned to each patient, ranging from 4751 to 6900.
+
+#### Demographic Details
+- `Age`: The age of the patients, which ranges from 60 to 90 years.
+- `Gender`: Coded as 0 for Male and 1 for Female.
+- `Ethnicity`: Coded as follows:
+  - 0: Caucasian
+  - 1: African American
+  - 2: Asian
+  - 3: Other
+- `EducationLevel`: Indicates the highest level of education completed:
+  - 0: None
+  - 1: High School
+  - 2: Bachelor's Degree
+  - 3: Higher Education (Graduate Degrees)
+
+#### Lifestyle Factors
+- `BMI`: Body Mass Index, ranging from 15 to 40.
+- `Smoking`: Smoking status, where 0 indicates no and 1 yes.
+- `AlcoholConsumption`: Weekly alcohol consumption in units, ranging from 0 to 20.
+- `PhysicalActivity`: Hours of physical activity per week, ranging from 0 to 10 hours.
+- `DietQuality`: Diet quality score from 0 to 10.
+- `SleepQuality`: Sleep quality score from 4 to 10.
+
+#### Medical History
+- `FamilyHistoryAlzheimers`: Indicates a family history of Alzheimer's Disease (0 = No, 1 = Yes).
+- `CardiovascularDisease`: Presence of cardiovascular disease (0 = No, 1 = Yes).
+- `Diabetes`: Presence of diabetes (0 = No, 1 = Yes).
+- `Depression`: Indicates depression (0 = No, 1 = Yes).
+- `HeadInjury`: History of head injury (0 = No, 1 = Yes).
+- `Hypertension`: Presence of hypertension (0 = No, 1 = Yes).
+
+#### Clinical Measurements
+- `SystolicBP`: Systolic blood pressure, ranging from 90 to 180 mmHg.
+- `DiastolicBP`: Diastolic blood pressure, ranging from 60 to 120 mmHg.
+- `CholesterolTotal`: Total cholesterol levels, ranging from 150 to 300 mg/dL.
+- `CholesterolLDL`: LDL cholesterol levels, ranging from 50 to 200 mg/dL.
+- `CholesterolHDL`: HDL cholesterol levels, ranging from 20 to 100 mg/dL.
+- `CholesterolTriglycerides`: Triglyceride levels, ranging from 50 to 400 mg/dL.
+
+#### Cognitive and Functional Assessments
+- `MMSE`: Mini-Mental State Examination score, ranging from 0 to 30.
+- `FunctionalAssessment`: Functional assessment score, ranging from 0 to 10.
+- `MemoryComplaints`: Indicates the presence of memory complaints (0 = No, 1 = Yes).
+- `BehavioralProblems`: Indicates the presence of behavioral problems (0 = No, 1 = Yes).
+- `ADL`: Activities of Daily Living score, ranging from 0 to 10.
+
+#### Symptoms
+- `Confusion`: Presence of confusion (0 = No, 1 = Yes).
+- `Disorientation`: Presence of disorientation (0 = No, 1 = Yes).
+- `PersonalityChanges`: Presence of personality changes (0 = No, 1 = Yes).
+- `DifficultyCompletingTasks`: Difficulty completing tasks (0 = No, 1 = Yes).
+- `Forgetfulness`: Presence of forgetfulness (0 = No, 1 = Yes).
+
+#### Diagnosis Information
+- `Diagnosis`: Diagnosis status for Alzheimer's Disease, where 0 indicates No and 1 Yes.
+
+#### Confidential Information
+- `DoctorInCharge`: Contains confidential information about the doctor in charge, labeled as "XXXConfid" for all patients.
+
+### Data Usage
+This dataset is designed for researchers and healthcare professionals to study Alzheimer's Disease, providing comprehensive insights into the factors that may influence the diagnosis and progression of the disease. Ethical guidelines and patient confidentiality must be maintained at all times during data handling and analysis.
+
 
 
 ### Analytical Insights and Visualization
